@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{465E8687-5858-4BB4-B2F4-8373E80F61EE}</ProjectGuid>
+    <RootNamespace>DileDebug</RootNamespace>
+    <Keyword>ManagedCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib\x64\mscoree.lib;c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib\x64\dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl />
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib\mscoree.lib;c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib\dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <Profile>true</Profile>
+    </Link>
+    <PreBuildEvent>
+      <Command>"$(SolutionDir)VersionNumberUpdater\VersionNumberUpdater.exe" "$(ProjectDir)\AssemblyInfo.cpp" 2004-06-24</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <OmitFramePointers>false</OmitFramePointers>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib\x64\mscoree.lib;c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib\x64\dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl />
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib\mscoree.lib;c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib\dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppDomainWrapper.cpp" />
+    <ClCompile Include="AppDomainWrapper2.cpp" />
+    <ClCompile Include="ArrayValueWrapper.cpp" />
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="AssemblyWrapper.cpp" />
+    <ClCompile Include="BaseWrapper.cpp" />
+    <ClCompile Include="BreakpointWrapper.cpp" />
+    <ClCompile Include="BstrConverter.cpp" />
+    <ClCompile Include="ChainWrapper.cpp" />
+    <ClCompile Include="ClassWrapper.cpp" />
+    <ClCompile Include="ClassWrapper2.cpp" />
+    <ClCompile Include="CodeWrapper.cpp" />
+    <ClCompile Include="ControllerWrapper.cpp" />
+    <ClCompile Include="DebugEventObjects.cpp" />
+    <ClCompile Include="Debugger.cpp" />
+    <ClCompile Include="DumpDebugger.cpp" />
+    <ClCompile Include="DumpExceptionInfo.cpp" />
+    <ClCompile Include="DumpFileReader.cpp" />
+    <ClCompile Include="DumpFileWriter.cpp" />
+    <ClCompile Include="DumpMiscInfo.cpp" />
+    <ClCompile Include="DumpModuleInfo.cpp" />
+    <ClCompile Include="DumpSystemInfo.cpp" />
+    <ClCompile Include="DumpThreadInfo.cpp" />
+    <ClCompile Include="DumpUnloadedModuleInfo.cpp" />
+    <ClCompile Include="EvalWrapper.cpp" />
+    <ClCompile Include="EvalWrapper2.cpp" />
+    <ClCompile Include="FrameWrapper.cpp" />
+    <ClCompile Include="FunctionBreakpointWrapper.cpp" />
+    <ClCompile Include="FunctionWrapper.cpp" />
+    <ClCompile Include="LpctstrConverter.cpp" />
+    <ClCompile Include="ManagedEventHandler.cpp" />
+    <ClCompile Include="MdaWrapper.cpp" />
+    <ClCompile Include="MemoryRange.cpp" />
+    <ClCompile Include="MetaHost.cpp" />
+    <ClCompile Include="ModuleWrapper.cpp" />
+    <ClCompile Include="MemoryDumpDataTarget.cpp" />
+    <ClCompile Include="ProcessLibraryProvider.cpp" />
+    <ClCompile Include="ProcessWrapper.cpp" />
+    <ClCompile Include="ProcessWrapper2.cpp" />
+    <ClCompile Include="RuntimeInfo.cpp" />
+    <ClCompile Include="Stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StepperWrapper.cpp" />
+    <ClCompile Include="ThreadDump.cpp" />
+    <ClCompile Include="ThreadWrapper.cpp" />
+    <ClCompile Include="ThreadWrapper2.cpp" />
+    <ClCompile Include="ThreadWrapper3.cpp" />
+    <ClCompile Include="TypeWrapper.cpp" />
+    <ClCompile Include="ValueWrapper.cpp" />
+    <ClCompile Include="ValueWrapper2.cpp" />
+    <ClCompile Include="Version.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppDomainWrapper.h" />
+    <ClInclude Include="AppDomainWrapper2.h" />
+    <ClInclude Include="ArrayValueWrapper.h" />
+    <ClInclude Include="AssemblyWrapper.h" />
+    <ClInclude Include="BaseWrapper.h" />
+    <ClInclude Include="BreakpointWrapper.h" />
+    <ClInclude Include="BstrConverter.h" />
+    <ClInclude Include="ChainWrapper.h" />
+    <ClInclude Include="ClassWrapper.h" />
+    <ClInclude Include="ClassWrapper2.h" />
+    <ClInclude Include="CodeWrapper.h" />
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="ControllerWrapper.h" />
+    <ClInclude Include="DebugEventObjects.h" />
+    <ClInclude Include="Debugger.h" />
+    <ClInclude Include="DumpDebugger.h" />
+    <ClInclude Include="DumpExceptionInfo.h" />
+    <ClInclude Include="DumpFileReader.h" />
+    <ClInclude Include="DumpFileWriter.h" />
+    <ClInclude Include="DumpMiscInfo.h" />
+    <ClInclude Include="DumpModuleInfo.h" />
+    <ClInclude Include="DumpSystemInfo.h" />
+    <ClInclude Include="DumpThreadInfo.h" />
+    <ClInclude Include="DumpUnloadedModuleInfo.h" />
+    <ClInclude Include="Enumerations.h" />
+    <ClInclude Include="EvalWrapper.h" />
+    <ClInclude Include="EvalWrapper2.h" />
+    <ClInclude Include="FrameWrapper.h" />
+    <ClInclude Include="FunctionBreakpointWrapper.h" />
+    <ClInclude Include="FunctionWrapper.h" />
+    <ClInclude Include="IDebugEventHandler.h" />
+    <ClInclude Include="LpctstrConverter.h" />
+    <ClInclude Include="ManagedEventHandler.h" />
+    <ClInclude Include="MdaWrapper.h" />
+    <ClInclude Include="MemoryRange.h" />
+    <ClInclude Include="MetaHost.h" />
+    <ClInclude Include="ModuleWrapper.h" />
+    <ClInclude Include="MemoryDumpDataTarget.h" />
+    <ClInclude Include="ProcessLibraryProvider.h" />
+    <ClInclude Include="ProcessWrapper.h" />
+    <ClInclude Include="ProcessWrapper2.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="RuntimeInfo.h" />
+    <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="StepperWrapper.h" />
+    <ClInclude Include="ThreadDump.h" />
+    <ClInclude Include="ThreadWrapper.h" />
+    <ClInclude Include="ThreadWrapper2.h" />
+    <ClInclude Include="ThreadWrapper3.h" />
+    <ClInclude Include="TypeWrapper.h" />
+    <ClInclude Include="ValueWrapper.h" />
+    <ClInclude Include="ValueWrapper2.h" />
+    <ClInclude Include="Version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.ico" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

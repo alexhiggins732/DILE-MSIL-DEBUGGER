@@ -1,0 +1,806 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CFA8E3DD-0804-4624-A9C2-8A359BC68D05}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Dile</RootNamespace>
+    <AssemblyName>Dile</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <StartupObject>Dile.Program</StartupObject>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationIcon>Images\DILE.ico</ApplicationIcon>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/Dile/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Dile.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Dile.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\BaseMenuInformation.cs" />
+    <Compile Include="Configuration\CodeEditorFontSettings.cs" />
+    <Compile Include="Configuration\DebuggerRegistryHandler.cs" />
+    <Compile Include="Configuration\Enumerations.cs" />
+    <Compile Include="Configuration\ExceptionInformation.cs" />
+    <Compile Include="Configuration\IChangebleFont.cs" />
+    <Compile Include="Configuration\IMenuInformation.cs" />
+    <Compile Include="Configuration\MenuFunctionShortcut.cs" />
+    <Compile Include="Configuration\PanelDisplayer.cs" />
+    <Compile Include="Configuration\SerializableFont.cs" />
+    <Compile Include="Configuration\UI\BaseSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\DebuggingSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\FontSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\GeneralProjectSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\GeneralSettingsDisplayer.cs" />
+    <Compile Include="Configuration\MenuItemShortcut.cs" />
+    <Compile Include="Configuration\UI\DisplayedDebuggingEventsDisplayer.cs" />
+    <Compile Include="Configuration\UI\HelpSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\ProjectDebuggingSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\ProjectExceptionSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\ProjectStartupSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\ShortcutSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\StartPageSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\TextEditorSettingsDisplayer.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Controls\BreakpointLine.cs" />
+    <Compile Include="Controls\CallerLine.cs" />
+    <Compile Include="Controls\Comment.cs" />
+    <Compile Include="Controls\CurrentLine.cs" />
+    <Compile Include="Controls\CustomDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DefaultLine.cs" />
+    <Compile Include="Controls\Delegates.cs" />
+    <Compile Include="Controls\FileDragDropEventArgs.cs" />
+    <Compile Include="Controls\ExactCallerLine.cs" />
+    <Compile Include="Controls\FeedUpdatedEventArgs.cs" />
+    <Compile Include="Controls\HighlightLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\HighlightLabel.Designer.cs">
+      <DependentUpon>HighlightLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ILEditorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ILEditorControl.Designer.cs">
+      <DependentUpon>ILEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BaseLineDescriptor.cs" />
+    <Compile Include="Controls\NativePoint.cs" />
+    <Compile Include="Controls\NextPossibleInstructionLine.cs" />
+    <Compile Include="Metadata\OpCodeItem.cs" />
+    <Compile Include="Controls\Parser.cs" />
+    <Compile Include="Controls\PathLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RssBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RssBrowser.Designer.cs">
+      <DependentUpon>RssBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SettingsDisplayerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SettingsDisplayerControl.Designer.cs">
+      <DependentUpon>SettingsDisplayerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Word.cs" />
+    <Compile Include="Debug\DebugEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Debug\Delegates.cs" />
+    <Compile Include="Debug\Enumerations.cs" />
+    <Compile Include="Debug\EvaluationContext.cs" />
+    <Compile Include="Debug\EvaluationHandlerException.cs" />
+    <Compile Include="Debug\Expressions\BaseDebugExpressionException.cs" />
+    <Compile Include="Debug\Expressions\BaseExpression.cs" />
+    <Compile Include="Debug\Expressions\CastExpression.cs" />
+    <Compile Include="Debug\Expressions\ConstantExpression.cs" />
+    <Compile Include="Debug\Expressions\ConstructorExpression.cs" />
+    <Compile Include="Debug\Expressions\DebugExpressionResult.cs" />
+    <Compile Include="Debug\Expressions\EvaluationException.cs" />
+    <Compile Include="Debug\Expressions\ExceptionExpression.cs" />
+    <Compile Include="Debug\Expressions\IgnoredCharPair.cs" />
+    <Compile Include="Debug\Expressions\IndexerExpression.cs" />
+    <Compile Include="Debug\Expressions\LocalScopeExpression.cs" />
+    <Compile Include="Debug\Expressions\OperatorExpression.cs" />
+    <Compile Include="Debug\Expressions\Parser.cs" />
+    <Compile Include="Debug\Expressions\MemberExpression.cs" />
+    <Compile Include="Debug\Expressions\ParserException.cs" />
+    <Compile Include="Debug\Expressions\TypeArgumentExpression.cs" />
+    <Compile Include="Debug\Expressions\TypeExpression.cs" />
+    <Compile Include="Debug\Expressions\TypeTreeNode.cs" />
+    <Compile Include="Debug\Expressions\TypeTreeNodeList.cs" />
+    <Compile Include="Debug\GenericMethodParameter.cs" />
+    <Compile Include="Debug\MissingModuleException.cs" />
+    <Compile Include="Disassemble\Assembly.cs" />
+    <Compile Include="Disassemble\AssemblyReference.cs" />
+    <Compile Include="Disassemble\Constants.cs" />
+    <Compile Include="Disassemble\CustomAttribute.cs" />
+    <Compile Include="Disassemble\Enumerations.cs" />
+    <Compile Include="Disassemble\EventDefinition.cs" />
+    <Compile Include="Disassemble\ExceptionHandler.cs" />
+    <Compile Include="Disassemble\ExportedType.cs" />
+    <Compile Include="Disassemble\HandlerClause.cs" />
+    <Compile Include="Disassemble\IMethodParameter.cs" />
+    <Compile Include="Disassemble\InMemoryMethodStream.cs" />
+    <Compile Include="Disassemble\FieldDefinition.cs" />
+    <Compile Include="Disassemble\File.cs" />
+    <Compile Include="Disassemble\GenericParameter.cs" />
+    <Compile Include="Disassemble\IHasSignature.cs" />
+    <Compile Include="Disassemble\ILazyInitialized.cs" />
+    <Compile Include="Disassemble\ILCodes\ArgumentILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\BaseILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\BaseParameterILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\CalliILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\CodeLine.cs" />
+    <Compile Include="Disassemble\ILCodes\FieldILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\LdtokenILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\LocationILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\MethodILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NumberILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\StringILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\SwitchILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\TypeILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\VariableILCode.cs" />
+    <Compile Include="Disassemble\IMultiLine.cs" />
+    <Compile Include="Disassemble\InterfaceImplementation.cs" />
+    <Compile Include="Disassemble\MethodSpec.cs" />
+    <Compile Include="Disassemble\PermissionSet.cs" />
+    <Compile Include="Disassemble\TextTokenBase.cs" />
+    <Compile Include="Disassemble\TokenBase.cs" />
+    <Compile Include="Disassemble\ManifestResource.cs" />
+    <Compile Include="Disassemble\MemberReference.cs" />
+    <Compile Include="Disassemble\MethodDefinition.cs" />
+    <Compile Include="Disassemble\ModuleReference.cs" />
+    <Compile Include="Disassemble\ModuleScope.cs" />
+    <Compile Include="Disassemble\Parameter.cs" />
+    <Compile Include="Disassemble\Property.cs" />
+    <Compile Include="Disassemble\SectionHeader.cs" />
+    <Compile Include="Disassemble\StandAloneSignature.cs" />
+    <Compile Include="Disassemble\TryClause.cs" />
+    <Compile Include="Disassemble\TypeSpecification.cs" />
+    <Compile Include="Disassemble\UserString.cs" />
+    <Compile Include="ExtensionMethods\IList\ExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\ReaderWriterLockSlim\ExtensionMethods.cs" />
+    <Compile Include="ILParser2\Code\Declaration\AssemblyReferenceDeclaration.cs" />
+    <Compile Include="ILParser2\Code\Declaration\DeclarationBase.cs" />
+    <Compile Include="ILParser2\Code\Enumerations.cs" />
+    <Compile Include="ILParser2\Code\Parser.cs" />
+    <Compile Include="ILParser2\Code\Token\CharacterToken.cs" />
+    <Compile Include="ILParser2\Code\Token\Float64Token.cs" />
+    <Compile Include="ILParser2\Code\Scanner.cs" />
+    <Compile Include="ILParser2\Code\Token\Int32Token.cs" />
+    <Compile Include="ILParser2\Code\Token\Int64Token.cs" />
+    <Compile Include="ILParser2\Code\Token\QStringToken.cs" />
+    <Compile Include="ILParser2\Code\Token\SQStringToken.cs" />
+    <Compile Include="ILParser2\Code\Token\TextToken.cs" />
+    <Compile Include="ILParser2\Code\Token\TokenBase.cs" />
+    <Compile Include="ILParser2\Code\Token\ValueTokenBase.cs" />
+    <Compile Include="ILParser2\Grammar\Enumerations.cs" />
+    <Compile Include="ILParser2\Grammar\LanguageElement.cs" />
+    <Compile Include="ILParser2\Grammar\LanguageDefinition.cs" />
+    <Compile Include="ILParser2\Grammar\Parser.cs" />
+    <Compile Include="ILParser2\Grammar\Scanner.cs" />
+    <Compile Include="ILParser2\Grammar\StringToken.cs" />
+    <Compile Include="ILParser2\Grammar\TokenBase.cs" />
+    <Compile Include="ILParser\EmptyParsedElement.cs" />
+    <Compile Include="ILParser\Enumerations.cs" />
+    <Compile Include="ILParser\ILCodeLine.cs" />
+    <Compile Include="ILParser\ILGrammarParser.cs" />
+    <Compile Include="ILParser\ILParser.cs" />
+    <Compile Include="ILParser\IndexedString.cs" />
+    <Compile Include="ILParser\IParsedElement.cs" />
+    <Compile Include="ILParser\LanguageElement.cs" />
+    <Compile Include="ILParser\ParsedElement.cs" />
+    <Compile Include="InvokeHelper.cs" />
+    <Compile Include="Metadata\COR_FIELD_OFFSET.cs" />
+    <Compile Include="Metadata\OpCodeGroups.cs" />
+    <Compile Include="Disassemble\Project.cs" />
+    <Compile Include="Disassemble\TypeDefinition.cs" />
+    <Compile Include="Disassemble\TypeReference.cs" />
+    <Compile Include="HelperFunctions.cs" />
+    <Compile Include="Metadata\AssemblyMetadata.cs" />
+    <Compile Include="Metadata\Guids.cs" />
+    <Compile Include="Metadata\COR_SECATTR.cs" />
+    <Compile Include="Metadata\CorMetaDataDispenserExClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\Enumerations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\IHostFilter.cs" />
+    <Compile Include="Metadata\IMapToken.cs" />
+    <Compile Include="Metadata\IMetaDataAssemblyEmit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\IMetaDataAssemblyImport.cs" />
+    <Compile Include="Metadata\IMetaDataDispenserEx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\IMetaDataEmit.cs" />
+    <Compile Include="Metadata\IMetaDataEmit2.cs" />
+    <Compile Include="Metadata\IMetaDataFilter.cs" />
+    <Compile Include="Metadata\IMetaDataImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\IMetaDataImport2.cs" />
+    <Compile Include="Metadata\IMetaDataTables.cs" />
+    <Compile Include="Metadata\IMetaDataTables2.cs" />
+    <Compile Include="Metadata\IMetaDataValidate.cs" />
+    <Compile Include="Metadata\MetaDataDispenserEx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\Signature\ArraySignatureItem.cs" />
+    <Compile Include="Metadata\Signature\BaseSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\BaseTokenSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\CustomAttributeElement.cs" />
+    <Compile Include="Metadata\Signature\CustomAttributeNamedArgument.cs" />
+    <Compile Include="Metadata\Signature\CustomAttributeSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\CustomModifier.cs" />
+    <Compile Include="Metadata\Signature\ElementSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\EndSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\Enumerations.cs" />
+    <Compile Include="Metadata\Signature\FieldMarshalSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\FieldSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\FunctionPointerSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\ICustomAttributeElement.cs" />
+    <Compile Include="Metadata\Signature\ILocalVarSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\MarshallingDescriptorReader.cs" />
+    <Compile Include="Metadata\Signature\MashallingDescriptorItem.cs" />
+    <Compile Include="Metadata\Signature\MethodRefSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\MethodSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\MethodSpecSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\PropertySignatureReader.cs" />
+    <Compile Include="Metadata\Signature\SecurityAttributeDescriptor.cs" />
+    <Compile Include="Metadata\Signature\SecuritySignatureReader.cs" />
+    <Compile Include="Metadata\Signature\SignatureCompression.cs" />
+    <Compile Include="Metadata\Signature\BaseSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\StandAloneSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\TypeSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\TypeSpecSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\VarSignatureItem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\HighlightLabel.resx">
+      <DependentUpon>HighlightLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ILEditorControl.resx">
+      <DependentUpon>ILEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RssBrowser.resx">
+      <DependentUpon>RssBrowser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SettingsDisplayerControl.resx">
+      <DependentUpon>SettingsDisplayerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Debug\Dump\Controls\ExceptionCategory.resx">
+      <DependentUpon>ExceptionCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Debug\Dump\Controls\MiscInfoCategory.resx">
+      <DependentUpon>MiscInfoCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Debug\Dump\Controls\ModuleCategory.resx">
+      <DependentUpon>ModuleCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Debug\Dump\Controls\SystemInfoCategory.resx">
+      <DependentUpon>SystemInfoCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Debug\Dump\Controls\ThreadCategory.resx">
+      <DependentUpon>ThreadCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Debug\Dump\Controls\UnloadedModuleCategory.resx">
+      <DependentUpon>UnloadedModuleCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MemoryDumpInfoPage.resx">
+      <DependentUpon>MemoryDumpInfoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OpCodeHelperPanel.resx">
+      <DependentUpon>OpCodeHelperPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SaveDumpDialog.resx">
+      <DependentUpon>SaveDumpDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StartPage.resx">
+      <DependentUpon>StartPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AttachProcessDialog.resx">
+      <DependentUpon>AttachProcessDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BasePanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BasePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BreakpointsPanel.resx">
+      <DependentUpon>BreakpointsPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CallStackPanel.resx">
+      <DependentUpon>CallStackPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CodeEditorForm.resx">
+      <DependentUpon>CodeEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DebugOutputPanel.resx">
+      <DependentUpon>DebugOutputPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DocumentSelectorForm.resx">
+      <DependentUpon>DocumentSelectorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ExtendedMessageBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExtendedMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InformationPanel.resx">
+      <DependentUpon>InformationPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ModulesPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModulesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ObjectsPanel.resx">
+      <DependentUpon>ObjectsPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ObjectViewer.resx">
+      <DependentUpon>ObjectViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProjectExplorer.resx">
+      <DependentUpon>ProjectExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProjectProperties.resx">
+      <DependentUpon>ProjectProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\QuickSearchPanel.resx">
+      <DependentUpon>QuickSearchPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\QuickSearchSettingsForm.resx">
+      <DependentUpon>QuickSearchSettingsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration\UI\SettingsDialog.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TextDisplayer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextDisplayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ThreadsPanel.resx">
+      <DependentUpon>ThreadsPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AssemblyLoadRequest.cs" />
+    <Compile Include="UI\Debug\Dump\Controls\CategoryDisplayer.cs" />
+    <Compile Include="UI\Debug\Dump\Controls\ExceptionCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Debug\Dump\Controls\ExceptionCategory.Designer.cs">
+      <DependentUpon>ExceptionCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Debug\Dump\Controls\ICategoryControl.cs" />
+    <Compile Include="UI\Debug\Dump\Controls\ICategoryDisplayer.cs" />
+    <Compile Include="UI\Debug\Dump\Controls\MiscInfoCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Debug\Dump\Controls\MiscInfoCategory.Designer.cs">
+      <DependentUpon>MiscInfoCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Debug\Dump\Controls\ModuleCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Debug\Dump\Controls\ModuleCategory.Designer.cs">
+      <DependentUpon>ModuleCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Debug\Dump\Controls\SystemInfoCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Debug\Dump\Controls\SystemInfoCategory.Designer.cs">
+      <DependentUpon>SystemInfoCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Debug\Dump\Controls\ThreadCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Debug\Dump\Controls\ThreadCategory.Designer.cs">
+      <DependentUpon>ThreadCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Debug\Dump\Controls\UnloadedModuleCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Debug\Dump\Controls\UnloadedModuleCategory.Designer.cs">
+      <DependentUpon>UnloadedModuleCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Debug\MissingModuleWithFrame.cs" />
+    <Compile Include="UI\DocumentContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MemoryDumpInfoPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MemoryDumpInfoPage.Designer.cs">
+      <DependentUpon>MemoryDumpInfoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OpCodeHelperPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OpCodeHelperPanel.Designer.cs">
+      <DependentUpon>OpCodeHelperPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RuntimeVersion.cs" />
+    <Compile Include="UI\SaveDumpDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SaveDumpDialog.Designer.cs">
+      <DependentUpon>SaveDumpDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StartPage.Designer.cs">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AssemblyLoader.cs" />
+    <Compile Include="UI\AttachProcessDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AttachProcessDialog.Designer.cs">
+      <DependentUpon>AttachProcessDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BasePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BreakpointsPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BreakpointsPanel.Designer.cs">
+      <DependentUpon>BreakpointsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CallStackPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CallStackPanel.Designer.cs">
+      <DependentUpon>CallStackPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CodeDisplayer.cs" />
+    <Compile Include="UI\CodeEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CodeEditorForm.Designer.cs">
+      <DependentUpon>CodeEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CodeObjectDisplayOptions.cs" />
+    <Compile Include="UI\Debug\ArgumentValueRefresher.cs" />
+    <Compile Include="UI\Debug\ArrayElementRefresher.cs" />
+    <Compile Include="UI\Debug\ArrayValueFormatter.cs" />
+    <Compile Include="UI\Debug\BaseEvaluationResult.cs" />
+    <Compile Include="UI\Debug\BaseValueFormatter.cs" />
+    <Compile Include="UI\Debug\BaseValueRefresher.cs" />
+    <Compile Include="UI\Debug\BoolValueFormatter.cs" />
+    <Compile Include="UI\Debug\BreakpointHandler.cs" />
+    <Compile Include="UI\Debug\BreakpointInformation.cs" />
+    <Compile Include="UI\Debug\CharValueFormatter.cs" />
+    <Compile Include="UI\Debug\DebugEventDescriptor.cs" />
+    <Compile Include="UI\Debug\Delegates.cs" />
+    <Compile Include="UI\Debug\Enumerations.cs" />
+    <Compile Include="UI\Debug\ErrorValueFormatter.cs" />
+    <Compile Include="UI\Debug\EvaluationResult.cs" />
+    <Compile Include="UI\Debug\ExceptionValueRefresher.cs" />
+    <Compile Include="UI\Debug\ExpressionValueRefresher.cs" />
+    <Compile Include="UI\Debug\FieldValueRefresher.cs" />
+    <Compile Include="UI\Debug\FrameInformation.cs" />
+    <Compile Include="UI\Debug\FrameRefresher.cs" />
+    <Compile Include="UI\Debug\FunctionBreakpointInformation.cs" />
+    <Compile Include="UI\Debug\ISimpleTypeValueFormatter.cs" />
+    <Compile Include="UI\Debug\IValueFormatter.cs" />
+    <Compile Include="UI\Debug\LocalVariableRefresher.cs" />
+    <Compile Include="UI\Debug\EvaluationHandler.cs" />
+    <Compile Include="UI\Debug\MissingModule.cs" />
+    <Compile Include="UI\Debug\MissingModuleFormatter.cs" />
+    <Compile Include="UI\Debug\NumberValueFormatter.cs" />
+    <Compile Include="UI\Debug\ObjectDisplayer.cs" />
+    <Compile Include="UI\Debug\PropertyValueRefresher.cs" />
+    <Compile Include="UI\Debug\RootValueFormatter.cs" />
+    <Compile Include="UI\Debug\StaticFieldValueRefresher.cs" />
+    <Compile Include="UI\Debug\StringValueFormatter.cs" />
+    <Compile Include="UI\Debug\ThisMethodValueRefresher.cs" />
+    <Compile Include="UI\Debug\TreeNodeRefresherConnection.cs" />
+    <Compile Include="UI\DebugOutputPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DebugOutputPanel.Designer.cs">
+      <DependentUpon>DebugOutputPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Debug\ValueDisplayer.cs" />
+    <Compile Include="UI\Delegates.cs" />
+    <Compile Include="UI\DocumentSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DocumentSelectorForm.Designer.cs">
+      <DependentUpon>DocumentSelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Enumerations.cs" />
+    <Compile Include="UI\ExtendedMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ExtendedMessageBox.Designer.cs">
+      <DependentUpon>ExtendedMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FoundItemEventArgs.cs" />
+    <Compile Include="UI\InformationPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InformationPanel.Designer.cs">
+      <DependentUpon>InformationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ModulesPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ModulesPanel.Designer.cs">
+      <DependentUpon>ModulesPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ObjectsPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ObjectsPanel.Designer.cs">
+      <DependentUpon>ObjectsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ObjectViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ObjectViewer.Designer.cs">
+      <DependentUpon>ObjectViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Settings.cs" />
+    <Compile Include="UI\ProcessDescription.cs" />
+    <Compile Include="UI\ProjectExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProjectProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProjectProperties.Designer.cs">
+      <DependentUpon>ProjectProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\QuickSearch.cs" />
+    <Compile Include="UI\QuickSearchPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\QuickSearchPanel.Designer.cs">
+      <DependentUpon>QuickSearchPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\QuickSearchSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\QuickSearchSettingsForm.Designer.cs">
+      <DependentUpon>QuickSearchSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\UI\SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\UI\SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShortcutConverter.cs" />
+    <Compile Include="UI\SidAndAttributes.cs" />
+    <Compile Include="UI\TextDisplayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TextDisplayer.Designer.cs">
+      <DependentUpon>TextDisplayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ThreadsPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ThreadsPanel.Designer.cs">
+      <DependentUpon>ThreadsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TokenUser.cs" />
+    <Compile Include="UI\ToStringWrapper.cs" />
+    <Compile Include="UI\TreeViewSearcher.cs" />
+    <Compile Include="UI\UIHandler.cs" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.3.1.24483, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DockPanelSuite\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asmparse.grammar" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="change_log.txt" />
+    <Content Include="Images\DILE.ico" />
+    <Content Include="Images\DILE.png" />
+    <Content Include="license.txt" />
+    <Content Include="readme.txt" />
+    <None Include="Resources\ReleasesRssFeed.xslt">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Resources\OpCodes.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\RssFeed.xslt">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dile.Debug\Dile.Debug.vcxproj">
+      <Project>{465E8687-5858-4BB4-B2F4-8373E80F61EE}</Project>
+      <Name>Dile.Debug</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

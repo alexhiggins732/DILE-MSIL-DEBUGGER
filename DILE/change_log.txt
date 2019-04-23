@@ -1,0 +1,140 @@
+v0.2.12:
+	- fixed bug: opening a "reference" assembly (like System.ServiceModel's) could cause a NotImplementedException with the message "Unknown assembly flag value".
+	- fixed bug: when disassembled text contained "//" characters (for example as part of a URL in a string), the text editor tried to color it as a comment which caused an ArgumentOutOfRangeException (as reported by jonny177).
+
+v0.2.11:
+	- fixed bug: when a method with referenced MethodSpec tokens was opened, DILE crashed with a StackOverflowException. (this bug was introduced in the previous, v0.2.10 version).
+
+v0.2.10:
+	- fixed bug: when text escaping was disabled and an instruction which consisted of more than 1 line had to be highlighted then often positions were miscalculated or displaying the text editor window failed.
+	- new feature: added support for escaping "unreadable" names with tokens (as Terminator suggested)
+	- new feature: method calls (property and ToString() evaluations) can be disabled for the Object Viewer
+
+v0.2.9:
+	- fixed bug: calling CloseEnum() could throw an unhandled exception in the 64-bit version of DILE when .NET 4.5/VS2012 was installed as well
+
+v0.2.8:
+	- slightly updated the code to be able to read the .NET 4.5 mscorlib.dll (and all other .NET Framework 4.5 assemblies as well)
+
+v0.2.7:
+	- several bug fixes (see SVN log for more details)
+
+v0.2.6:
+	- added debugging full support for generics (expressions with type parameters can be evaluated and the Object Viewer will also display these values correctly)
+	- added support for creating nested classes with expression evaluation
+	- added support for creating arrays of nested classes with expression evaluation
+	- added support for evaluating expressions that contain enumerations
+	- added correct reading of events from metadata (class events are collected in the Project Explorer under the "Events" node similarly to Properties)
+	- added parsing of .NET 2.0 format of permission sets
+	- fixed bug: debug expression parser did not recognize array parameters correctly that had more than 1 parameters
+	- fixed bug: creating array of value types was not possible
+	- fixed bug no. 1672137: "Constant string fields are not fully displayed"
+	- fixed bug: after adding a dynamic assembly to the project, adding a new assembly was not possible
+	- fixed bug: method resolution failed when an overload contained pointer parameter
+
+v0.2.5:
+	- added x64 compatibility
+	- added reading of PE32+ (64-bit) header
+	- fixed bug: files with uppercase extension couldn't be loaded using drag-and-drop
+	- fixed bug: debugging was not enabled/disabled if project start-up settings were changed using the Project Explorer
+	- fixed bug: debugging could not be started if only Startup program was selected (not an assembly in the project)
+
+v0.2.4:
+	- completely rewritten (from "scratch") the Object Viewer form, now it's multi-thread, lot more reliable, it has log functionality, evaluations can be aborted and displayed information is lot more complete (no fields or properties should be missing)
+	- modules that are loaded during expression evaluation are added to the Modules Panel
+	- changed the structure of displayed nodes in the Project Explorer: types are grouped by namespaces (hopefully this improves usability)
+	- redesigned the Quick Search Settings form
+	- several panels (modules, threads, local variables, arguments, watch, auto objects, callstack) use lazy-initialization to display information which means that they refresh their contents only when they're visible
+	- made evaluation aborting more robust and reliable
+	- updated the used DockPanelSuite to version 1.0.0.0
+	- added a custom message box for the warning that is displayed when an assembly is not in the project (it also has a "yes to all" and "no to all" button)
+	- added set IP (instruction pointer, basically it's like the Set next statement in VS)
+	- added Watch Panel (every expression that is added to the panel will be evaluated after each step)
+	- added new settings (func-eval timeout and func-eval abort timeout)
+	- added a text displayer form that can be used to display text with or without escape characters, format text as xml or display text as html
+	- added context menu to every ListView and DataGrid control; the menu allows you to copy values to clipboard or display them in the text displayer form, and also contains custom actions when available
+	- added "Add module to project" menu option to several places
+	- added "Locate in Project Explorer" menu item to the Quick Search Panel
+	- fixed bug: breakpoints were not set in assemblies which had different assembly and module name (e.g.: mscorlib)
+	- fixed bug: TypeSpecification parameters of type instructions (e.g.: castclass, newarr) were not displayed in the IL code
+	- fixed bug: debuggee was not suspended when a BreakpointSetError occurred and breakpoint was removed (not deactivated)
+	- fixed bug: better handling of detaching when an evaluation is still running
+	- fixed several expression parsing related bug (e.g.: in some cases, indexers were handled incorrectly)
+	- fixed bug: debuggee may have been continued running if a debug expression loaded a new module
+
+v0.2.3:
+	- expression evaluation during debugging (generics are not supported yet)
+	- startup assembly/program can be specified along with the arguments and working directory
+	- debugging can be started with stepping (in such cases DILE will pause the debuggee when the first IL code is hit)
+	- run to cursor
+	- stop debuggee only when an unhandled exception is thrown
+	- filtering debug events that are shown in the Debug Output Panel
+	- automatic detection of the .NET Framework version when attaching to a process
+	- refreshing displayed processes in the Attach to process window
+	- adding not loaded assemblies to the DILE project made easier (right click in the call stack on an "Unknown method..." line and choose "Add the referenced module to the project" option from the popup menu)
+	- Object viewer menu to quickly display the Object Viewer window during debugging (shortcut by default: Ctrl + W)
+	- several bug fixes
+
+v0.2.2: 
+	- dynamic assembly debugging
+	- assembly and appdomain information in the Modules Panel
+	- several bug fixes
+
+v0.2.1:
+	- Maximized the length of a node's title (in Project Explorer) to 1024 characters. The TreeView control seems to freeze if a node's title is too long...
+	- Significantly decreased memory consumption of loaded assemblies.
+	- Added font settings.
+	- Added setting to associate/dissociate the .dileproj extension with DILE.
+ 
+v0.2:
+	- compiled using .NET Framework RTM (v2.0.50727)
+	- fixed several debugging related bugs
+	- modules panel
+	- threads panel
+	- MDA (Managed Debug Assistant) support
+	- debuggee thrown exceptions can be skipped
+	- debuggee can be automatically paused on chosen events (e.g.: LoadClass, LoadModule, CreateThread)
+	- if DILE is closed while debugging a program then DILE will detach instead of stopping the debuggee
+	- decimal or hexadecimal number display
+	- plenty of new settings (configurable default directories, shortcuts etc.)
+	- new project settings (list of exceptions to skip)
+	- recent projects and recent assemblies list
+	- projects and assemblies can be loaded by drag&drop
+	- searching for project items in the Quick Search Panel can be aborted by pressing Escape
+	- windows list
+	- VS-like window-selecting by pressing Ctrl + Tab
+	- minor new UI features
+	- new icons :-)
+
+v0.2 beta 2:
+	- fixed a bug which caused invalid cast exception to be thrown when setting breakpoints in a v1.1 assembly
+	- fixed black background color problem which occured with certain desktop settings
+	- refactored the debug event displaying code
+	- upgraded to DockPanelSuite 0.99.0.3
+	- fixed a few minor bugs
+
+v0.2 beta:
+	- added basic debugging functionalities including:
+		- step into/step over/step out
+		- start/stop/detach from/attach to process
+		- debugging is stopped when exception thrown
+		- add/remove/activate/deactive breakpoint
+		- "Object Viewer"
+		- call stack: including going up and down in the current call stack
+		- local variables/arguments
+		- debug messages
+		- debug events (e.g.: process started/exited, class loaded/unloaded)
+	- quick search
+
+v0.1 beta2:
+	- fixed handling of retargetable assemblies
+	- added warning to save a project if it was modified
+	- fixed code to handle properly if not an xml/invalid xml file is opened as a project
+
+v0.1 beta:
+	- added generics support thus the program can handle assemblies which were built using .NET Framework 2.0
+	- marshalling informations are shown
+	- permission sets are shown (though there is some problem with this, check the readme.txt for further information)
+
+v0.01 pre-alpha:
+	- first release
