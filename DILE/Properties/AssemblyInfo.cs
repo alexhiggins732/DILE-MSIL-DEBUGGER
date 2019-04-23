@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DILE")]
+[assembly: AssemblyTitle("DILE - MSIL Disassembler and Debugger")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Petrény Zsolt")]
+[assembly: AssemblyCompany("Petrény Zsolt, Alexander Higgins")]
 [assembly: AssemblyProduct("DILE")]
-[assembly: AssemblyCopyright("Copyright @  2013")]
+[assembly: AssemblyCopyright("Copyright @  2013, 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -23,6 +23,6 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("0.2.12.3709")]
+[assembly: AssemblyVersion("0.2.26.1")]
 [assembly: ComVisible(false)]
-[assembly: AssemblyFileVersionAttribute("0.2.12.3709")]
+[assembly: AssemblyFileVersion("0.2.26.1")]
